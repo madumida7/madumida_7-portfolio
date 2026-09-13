@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, .font-serif-title {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Glassmorphism & delicate aesthetic accents */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 220, 235, 0.6);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(244, 114, 182, 0.45);
+  box-shadow: 0 16px 32px -8px rgba(244, 114, 182, 0.12), 0 4px 12px -2px rgba(219, 39, 119, 0.04);
+  transform: translateY(-2px);
+}
+
+.glass-nav {
+  background: rgba(255, 245, 249, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(251, 207, 232, 0.5);
+}
+
+/* Subtle ambient aura */
+.ambient-glow-pink {
+  background: radial-gradient(circle at 50% 50%, rgba(251, 207, 232, 0.45) 0%, rgba(255, 241, 246, 0) 70%);
+}
+
+.ambient-glow-rose {
+  background: radial-gradient(circle at 50% 50%, rgba(244, 114, 182, 0.25) 0%, rgba(255, 245, 249, 0) 70%);
+}
+
+/* Delicate subtle texture pattern */
+.bg-delicate-pattern {
+  background-color: #fff5f9;
+  background-image: radial-gradient(rgba(244, 114, 182, 0.08) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff0f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f472b6;
+  border-radius: 9999px;
+  border: 2px solid #fff0f5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #db2777;
+}
